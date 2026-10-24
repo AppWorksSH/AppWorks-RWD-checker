@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Błąd: przepełnienie poziome</title>
+<link rel="stylesheet" href="/site.css">
+<script src="/site.js"></script>
+<style>
+  .promo-box { width: 600px; background: #fee4e2; padding: 20px; }
+  .narrow { width: 150px; background: #eef; font-size: 22px; }
+  table td { padding: 6px 30px; border: 1px solid #ccc; white-space: nowrap; }
+</style>
+</head>
+<body>
+<header>
+  <a href="/">Logo</a>
+  <button class="burger" data-works aria-label="Menu" aria-controls="nav" aria-expanded="false">☰</button>
+  <nav id="nav"><ul><li><a href="/">Start</a></li><li><a href="/small">Mały tekst</a></li><li><a href="/images">Obrazy</a></li></ul></nav>
+</header>
+<main>
+  <h1>Przepełnienie</h1>
+  <div class="promo-box">Ten blok ma sztywną szerokość 600 px.</div>
+  <div class="narrow">Konstantynopolitańczykowianeczka</div>
+  <table><tr><td>Kolumna pierwsza</td><td>Kolumna druga</td><td>Kolumna trzecia</td><td>Kolumna czwarta</td></tr></table>
+</main>
+</body>
+</html>

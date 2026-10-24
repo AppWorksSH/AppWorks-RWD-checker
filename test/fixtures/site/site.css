@@ -1,0 +1,16 @@
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.5 -apple-system, Helvetica, Arial, sans-serif; color: #222; }
+header { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; background: #101828; color: #fff; }
+header a { color: #fff; }
+header nav ul { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0; }
+header .burger { display: none; width: 44px; height: 44px; background: none; border: 1px solid #fff; color: #fff; font-size: 22px; }
+main { max-width: 1100px; margin: 0 auto; padding: 24px 20px; }
+.cookie { position: fixed; left: 0; right: 0; bottom: 0; background: #fff; border-top: 2px solid #4f46e5; padding: 16px 20px; z-index: 100; }
+.cookie button { padding: 10px 16px; }
+footer { padding: 20px; background: #f2f4f7; }
+@media (max-width: 767px) {
+  header nav { display: none; }
+  header nav.open { display: block; position: absolute; top: 68px; left: 0; right: 0; background: #101828; padding: 12px 20px; }
+  header nav.open ul { flex-direction: column; }
+  header .burger { display: block; }
+}

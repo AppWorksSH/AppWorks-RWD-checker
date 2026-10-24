@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Strona główna (poprawna)</title>
+<link rel="stylesheet" href="/site.css">
+<script src="/site.js"></script>
+</head>
+<body>
+<header>
+  <a href="/"><img src="/img/logo.png" width="160" height="40" alt="Logo"></a>
+  <button class="burger" data-works aria-label="Menu" aria-controls="nav" aria-expanded="false">☰</button>
+  <nav id="nav"><ul>
+    <li><a href="/overflow">Przepełnienie</a></li>
+    <li><a href="/small">Mały tekst</a></li>
+    <li><a href="/images">Obrazy</a></li>
+    <li><a href="/overlap">Nakładanie</a></li>
+  </ul></nav>
+</header>
+<main>
+  <h1>Strona testowa RWD Checkera</h1>
+  <p>Ta strona jest poprawna. Podstrony zawierają celowe błędy.</p>
+  <ul>
+    <li><a href="/overflow">Przepełnienie poziome</a></li>
+    <li><a href="/no-viewport">Brak meta viewport</a></li>
+    <li><a href="/small">Mały tekst i małe przyciski</a></li>
+    <li><a href="/images">Zniekształcone obrazy</a></li>
+    <li><a href="/overlap">Nakładający się tekst</a></li>
+    <li><a href="/broken-menu">Zepsute menu</a></li>
+    <li><a href="/range">Błąd w zakresie szerokości</a></li>
+    <li><a href="/hidden-overflow">Ukryte przepełnienie</a></li>
+    <li><a href="/js-error">Błąd JavaScript</a></li>
+    <li><a href="/missing-page">Niedziałający link</a></li>
+    <li><a href="/private/secret">Zablokowane w robots.txt</a></li>
+  </ul>
+</main>
+<div class="cookie" hidden>Używamy ciasteczek (cookies), aby strona działała poprawnie. <button>Akceptuj wszystkie</button></div>
+<footer>Stopka</footer>
+</body>
+</html>

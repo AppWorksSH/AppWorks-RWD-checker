@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Błąd: nakładający się i ucięty tekst, przyklejony pasek</title>
+<link rel="stylesheet" href="/site.css">
+<style>
+  .stage { position: relative; height: 120px; }
+  .stage .a, .stage .b { position: absolute; top: 10px; left: 10px; font-size: 24px; margin: 0; }
+  .stage .b { top: 18px; left: 30px; color: #b42318; }
+  .clip { height: 24px; overflow: hidden; width: 220px; background: #eef; }
+  @media (max-width: 600px) {
+    .sticky-bar { position: fixed; top: 0; left: 0; right: 0; height: 55vh; background: rgba(16,24,40,.95); color: #fff; padding: 20px; z-index: 50; }
+  }
+  .spacer { height: 2000px; }
+</style>
+</head>
+<body>
+<div class="sticky-bar">Promocja! Ten pasek na telefonie zasłania ponad połowę ekranu.</div>
+<main>
+  <h1>Nakładanie</h1>
+  <div class="stage"><h2 class="a">Nagłówek sekcji</h2><p class="b">Opis nachodzący na nagłówek</p></div>
+  <div class="clip">To jest dłuższy opis produktu, który nie mieści się w jednej linii i zostanie ucięty.</div>
+  <div class="spacer"></div>
+  <p><a href="/">Powrót</a></p>
+</main>
+</body>
+</html>

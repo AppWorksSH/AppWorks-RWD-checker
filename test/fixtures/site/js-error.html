@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Błąd: wyjątek JS, brakujący obraz, przesunięcia układu</title>
+<link rel="stylesheet" href="/site.css">
+</head>
+<body>
+<main>
+  <div id="slot"></div>
+  <h1>Błąd JavaScript</h1>
+  <p>Na tej stronie skrypt rzuca wyjątek, brakuje obrazu, a treść przeskakuje po załadowaniu.</p>
+  <img src="/img/nope.png" width="100" height="100" alt="Brak">
+  <p>Akapit, który zostanie przesunięty w dół.</p>
+  <p><a href="/">Powrót</a></p>
+</main>
+<script>
+  setTimeout(function () {
+    var d = document.createElement('div');
+    d.style.height = '400px';
+    d.style.background = '#fee4e2';
+    d.textContent = 'Wstawiony baner';
+    document.getElementById('slot').appendChild(d);
+  }, 900);
+  window.undefinedFunctionCall();
+</script>
+</body>
+</html>

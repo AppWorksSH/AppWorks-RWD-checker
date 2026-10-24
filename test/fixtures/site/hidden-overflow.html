@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Błąd: treść ucięta przez overflow-x: hidden</title>
+<link rel="stylesheet" href="/site.css">
+<style>
+  html, body { overflow-x: hidden; }
+  .cut { width: 130vw; background: #d1fadf; padding: 16px; }
+  .offcanvas { position: absolute; top: 0; left: 100%; width: 300px; height: 200px; background: #eee; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Ukryte przepełnienie</h1>
+  <div class="cut">Ten blok jest szerszy niż ekran, ale body ma overflow-x: hidden, więc prawa część tekstu jest niewidoczna dla użytkownika.</div>
+  <div class="offcanvas">Panel poza ekranem (to nie jest błąd)</div>
+  <p><a href="/">Powrót</a></p>
+</main>
+</body>
+</html>

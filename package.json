@@ -1,0 +1,87 @@
+{
+  "name": "rwd-checker",
+  "productName": "RWD Checker",
+  "version": "1.0.0",
+  "description": "Automatyczne sprawdzanie stron internetowych pod kątem RWD — AppWorks",
+  "author": "AppWorks",
+  "license": "UNLICENSED",
+  "private": true,
+  "main": "dist/main.js",
+  "bin": {
+    "rwd-checker": "dist/cli.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/build.mjs --watch",
+    "start": "node scripts/build.mjs && electron .",
+    "app": "electron .",
+    "scan": "node dist/cli.js scan",
+    "browsers": "node node_modules/playwright-core/cli.js install chromium webkit firefox",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run test/unit",
+    "test:e2e": "vitest run test/e2e",
+    "test:app": "node scripts/build.mjs && node scripts/app-smoke.mjs",
+    "fixtures": "node test/fixtures/server.mjs",
+    "icon": "node scripts/make-icon.mjs",
+    "dist": "node scripts/build.mjs && electron-builder --mac --arm64"
+  },
+  "dependencies": {
+    "axe-core": "^4.14.0",
+    "playwright-core": "^1.64.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "electron": "^45.0.0",
+    "electron-builder": "^26.18.0",
+    "esbuild": "^0.28.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "typescript": "^5.9.0",
+    "vitest": "^5.0.5"
+  },
+  "build": {
+    "appId": "pl.appworks.rwdchecker",
+    "productName": "RWD Checker",
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "files": [
+      "dist/**/*",
+      "!dist/**/*.map",
+      "package.json"
+    ],
+    "npmRebuild": false,
+    "asarUnpack": [
+      "node_modules/playwright-core/**",
+      "node_modules/axe-core/**"
+    ],
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "arm64"
+          ]
+        },
+        {
+          "target": "zip",
+          "arch": [
+            "arm64"
+          ]
+        }
+      ],
+      "identity": null,
+      "hardenedRuntime": false
+    },
+    "dmg": {
+      "title": "RWD Checker"
+    }
+  }
+}
